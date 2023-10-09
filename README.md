@@ -26,6 +26,8 @@ Steps to follow create your own contract compile and deployment environments
 
 (location of files in deployment script is according to this repository structure)    
 
+- Currently TON-verifier test-net doesnt support tact.compiler version 1.1.4 so needed to downgrade into 1.1.3 to verify .
+
 
 
 
