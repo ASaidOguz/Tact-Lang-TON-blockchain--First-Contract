@@ -1,0 +1,55 @@
+Arguments: 
+  /home/ahmet_said/.nvm/versions/node/v20.8.0/bin/node /mnt/c/Users/HP/AppData/Roaming/npm/node_modules/yarn/bin/yarn.js install
+
+PATH: 
+  /home/ahmet_said/.volta/bin:/home/ahmet_said/.bun/bin:/home/ahmet_said/.vscode-server/bin/e7e037083ff4455cf320e344325dacb480062c3c/bin/remote-cli:/home/ahmet_said/.volta/bin:/home/ahmet_said/.local/bin:/home/ahmet_said/.nvm/versions/node/v20.8.0/bin:/home/ahmet_said/.starkli/bin:/home/ahmet_said/.volta/bin:/home/ahmet_said/.bun/bin:/home/ahmet_said/.cargo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2022.1.0_x64__79rhkp1fndgsc:/mnt/c/Program Files/PowerShell/7:/mnt/c/Program Files/Microsoft/jdk-11.0.12.7-hotspot/bin:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn/:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn/:/mnt/c/Program Files/dotnet/:/mnt/c/TDM-GCC-64/bin:/mnt/c/ProgramData/chocolatey/bin:/mnt/c/Program Files/CMake/bin:/mnt/c/Program Files/Go/bin:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/PowerShell/7/:/mnt/c/Users/HP/AppData/Local/Programs/Python/Python310/Scripts/:/mnt/c/Users/HP/AppData/Local/Programs/Python/Python310/:/mnt/c/Users/HP/.cargo/bin:/mnt/c/Users/HP/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/HP/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/HP/go/bin:/mnt/c/Users/HP/AppData/Local/GitHubDesktop/bin:/mnt/c/Program Files/heroku/bin:/mnt/c/Users/HP/AppData/Local/nvs/:/mnt/c/Program Files/PostgreSQL/14/bin:/mnt/c/Users/HP/AppData/Roaming/npm:/mnt/c/Users/HP/.dotnet/tools:/mnt/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2022.2.2/bin:/mnt/c/Users/HP/ton/bin:/mnt/c/Users/HP/Fiftlib:/mnt/c/Users/HP/ton-build/:/mnt/c/Users/HP/Bin/:/mnt/c/Users/HP/.encore/bin:/mnt/c/Users/HP/go/bin:/mnt/c/Users/HP/.fly/bin:/mnt/c/Users/HP/.fly/bin:/snap/bin:/home/ahmet_said/.foundry/bin:/home/ahmet_said/.foundry/bin
+
+Yarn version: 
+  1.22.15
+
+Node version: 
+  20.8.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  SyntaxError: /home/ahmet_said/Tact-first/package.json: Expected double-quoted property name in JSON at position 295
+      at JSON.parse (<anonymous>)
+      at /mnt/c/Users/HP/AppData/Roaming/npm/node_modules/yarn/lib/cli.js:1625:59
+      at Generator.next (<anonymous>)
+      at step (/mnt/c/Users/HP/AppData/Roaming/npm/node_modules/yarn/lib/cli.js:310:30)
+      at /mnt/c/Users/HP/AppData/Roaming/npm/node_modules/yarn/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "dependencies": {
+      "@tact-lang/compiler": "1.1.3",
+      "@tact-lang/deployer": "^0.2.0",
+      "@tact-lang/emulator": "^4.2.3",
+      "@ton/core": "^0.52.2",
+      "base64url": "^3.0.1",
+      "qrcode": "^1.5.3",
+      "qrcode-terminal": "^0.12.0",
+      "qs": "^6.11.2",
+      "ton": "^13.6.1",
+      
+    },
+    "scripts": {
+      "build": "tact --config ./tact.config.json",
+      "deploy": "ts-node ./deploymentScript.ts",
+      "test": "ts-node ./test/contract_tests.t.ts"
+    },
+    "devDependencies": {
+      "@types/jest": "^29.5.5",
+      "@types/qrcode": "^1.5.2",
+      "@types/qrcode-terminal": "^0.12.0",
+      "@types/qs": "^6.9.8"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

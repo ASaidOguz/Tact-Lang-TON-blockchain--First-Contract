@@ -2,6 +2,9 @@
   "dependencies": {
     "@tact-lang/compiler": "1.1.3",
     "@tact-lang/deployer": "^0.2.0",
+    "@tact-lang/emulator": "^4.2.3",
+    "@ton-community/sandbox": "^0.11.0",
+    "@ton/core": "^0.52.2",
     "base64url": "^3.0.1",
     "qrcode": "^1.5.3",
     "qrcode-terminal": "^0.12.0",
@@ -10,9 +13,11 @@
   },
   "scripts": {
     "build": "tact --config ./tact.config.json",
-    "deploy": "ts-node ./deploymentScript.ts"
+    "deploy": "ts-node ./deploymentScript.ts",
+    "test": "ts-node ./test/unit_test.t.ts"
   },
   "devDependencies": {
+    "@types/jest": "^29.5.5",
     "@types/qrcode": "^1.5.2",
     "@types/qrcode-terminal": "^0.12.0",
     "@types/qs": "^6.9.8"

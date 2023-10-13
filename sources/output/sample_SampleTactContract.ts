@@ -433,7 +433,7 @@ const SampleTactContract_receivers: ABIReceiver[] = [
     {"receiver":"internal","message":{"kind":"text","text":"increment"}},
 ]
 
-export class SampleTactContract implements Contract {
+export  class SampleTactContract implements Contract {
     
     static async init(owner: Address) {
         return await SampleTactContract_init(owner);
@@ -463,11 +463,14 @@ export class SampleTactContract implements Contract {
         this.init = init;
     }
     
-    async send(provider: ContractProvider, via: Sender, args: { value: bigint, bounce?: boolean| null | undefined }, message: Add | 'increment') {
+    async send(provider: ContractProvider, via: Sender, args: { value: bigint, bounce?: boolean| null | undefined }, message: Add | 'increment'|Deploy) {
         
         let body: Cell | null = null;
         if (message && typeof message === 'object' && !(message instanceof Slice) && message.$$type === 'Add') {
             body = beginCell().store(storeAdd(message)).endCell();
+        }
+        if (message && typeof message === 'object' && !(message instanceof Slice) && message.$$type === 'Deploy') {
+            body = beginCell().store(storeDeploy(message)).endCell();
         }
         if (message === 'increment') {
             body = beginCell().storeUint(0, 32).storeStringTail(message).endCell();
